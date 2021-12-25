@@ -12,7 +12,7 @@ function Navbar() {
     <nav className={styles.navbar}>
       <ul>
         <li className={styles.title}>
-          <Link to="/">myMoneyApp</Link>
+          <Link to="/">myMoney</Link>
         </li>
 
         {!user && (

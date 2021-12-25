@@ -41,8 +41,8 @@ function Login() {
         </button>
       )}
       {error && <p>{error}</p>}
-      <Link to="/forgot" style={{ marginLeft: "10px" }}>
-        forgot password
+      <Link to="/forget" style={{ marginLeft: "10px" }}>
+        forget password
       </Link>
     </form>
   );

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { projectAuth } from "../firebase/config";
 import { useAuthContext } from "./useAuthContext";
 
-export const useForgot = () => {
+export const useForget = () => {
   const [isCanclled, setIsCanclled] = useState(false);
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const { dispatch } = useAuthContext();
 
-  const forgot = async (email) => {
+  const forget = async (email) => {
     setError(null);
     setIsPending(true);
     // sign the user out
@@ -34,5 +34,5 @@ export const useForgot = () => {
     return () => setIsCanclled(true);
   }, []);
 
-  return { forgot, error, isPending };
+  return { forget, error, isPending };
 };

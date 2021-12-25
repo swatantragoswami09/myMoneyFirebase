@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import styles from "./Forgot.module.css";
-import { useForgot } from "../hooks/useForgot";
+import styles from "./Forget.module.css";
+import { useForget } from "../hooks/useForget";
 
-function Forgot() {
+function Forget() {
   const [email, setemail] = useState("");
-  const { forgot, error, isPending } = useForgot();
+  const { forget, error, isPending } = useForget();
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email);
-    forgot(email);
+    forget(email);
   };
   return (
     <form onSubmit={handleSubmit} className={styles["login-form"]}>
-      <h2>Forgot</h2>
+      <h2>Forget</h2>
       <label>
         <span>email:</span>
         <input
@@ -47,4 +47,4 @@ function Forgot() {
   );
 }
 
-export default Forgot;
+export default Forget;

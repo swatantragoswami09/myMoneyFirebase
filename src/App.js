@@ -5,7 +5,7 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
 import { useAuthContext } from "./hooks/useAuthContext";
-import Forgot from "./components/Forgot";
+import Forget from "./components/Forget";
 
 function App() {
   const { authIsReady, user } = useAuthContext();
@@ -28,9 +28,9 @@ function App() {
               {user && <Redirect to="/" />}
               {!user && <Signup />}
             </Route>
-            <Route path="/forgot">
+            <Route path="/forget">
               {user && <Redirect to="/" />}
-              {!user && <Forgot />}
+              {!user && <Forget />}
             </Route>
           </Switch>
         </BrowserRouter>
